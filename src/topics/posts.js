@@ -334,7 +334,7 @@ module.exports = function (Topics) {
 	};
 
 	async function incrementFieldAndUpdateSortedSet({tid, field, by, set}) {
-		console.log('fatbiscuit247');
+		console.log('claire sze');
 		const value = await db.incrObjectFieldBy(`topic:${tid}`, field, by);
 		await db[Array.isArray(set) ? 'sortedSetsAdd' : 'sortedSetAdd'](set, value, tid);
 	}
